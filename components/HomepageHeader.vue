@@ -2,7 +2,7 @@
   <div>
     <h1>{{ title }}</h1>
     <h2>{{ subtitle }}</h2>
-    <p>{{ content }}</p>
+    <div v-html="content"></div>
   </div>
 </template>
 
