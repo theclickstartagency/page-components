@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1>{{ title }}</h1>
-    <h2>{{ subtitle }}</h2>
-    <div v-html="content"></div>
+    <h1 :class="styles.title">{{ title }}</h1>
+    <h2 :class="styles.subtitle">{{ subtitle }}</h2>
+    <div :class="styles.content" v-html="content"></div>
   </div>
 </template>
 
@@ -19,6 +19,14 @@
     content: {
       type: String,
       default: 'Content'
+    },
+    styles: {
+      type: Object,
+      default: {
+        title: 'text-red',
+        subtitle: 'text-blue',
+        content: 'text-green'
+      }
     }
   })
 </script>
